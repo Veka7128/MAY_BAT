@@ -229,6 +229,7 @@ form button:hover {
     transition: opacity 0.6s ease, transform 0.6s ease;
     pointer-events: auto;
 
+
 }
 
 .choice-buttons.reveal {
@@ -258,4 +259,38 @@ form button:hover {
     background-color: #333;
     transform: scale(1.03) rotate(-1.5deg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    z-index: 10;
+}
+
+
+@media (max-width: 832px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 8;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
 }
