@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="image/logo.png" alt="Logo MAY BÂT" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="maconnerie.html">Maçonnerie Générale</a></li>
+                <li><a href="renovation.html">Rénovation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="call-button" onclick="handleCallClick()">Appelez-nous</button>
+    </header>
+
+    <main>
+        <section>
+
+            <h2>Demandez un devis ou posez-nous vos questions :</h2>
+            <form action="https://formspree.io/f/mjkypbwa" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="NOM" required
+                    oninvalid="this.setCustomValidity('Veuillez entrer votre nom.')"
+                    oninput="this.setCustomValidity('')">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="EMAIL" placeholder="exemple@exemple.com" required
+                    oninvalid="this.setCustomValidity('Veuillez entrer un email valide.')"
+                    oninput="this.setCustomValidity('')">
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="MESSAGE" required
+                    oninvalid="this.setCustomValidity('Veuillez entrer votre(s) message(s)')"
+                    oninput="this.setCustomValidity('')"></textarea>
+
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="TELEPHONE" placeholder="+33 6 12 34 56 78"
+                    pattern="^[0-9+\s\-]{7,15}$" required
+                    oninvalid="this.setCustomValidity('Veuillez entrer un numéro de téléphone valide.')"
+                    oninput="this.setCustomValidity('')">
+
+                <input type="hidden" name="_subject" value="Demande de contact via le site MAY-BÂT">
+                <input type="hidden" name="_next" value="merci.html">
+
+                <button type="submit">Envoyer</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MAY-BAT. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
