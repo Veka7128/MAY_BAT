@@ -26,9 +26,9 @@ header {
 }
 
 .logo {
-    height: 80px;
+    height: 70px;
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-left: 5px;
     cursor: pointer;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
@@ -94,6 +94,7 @@ form button:focus {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+
 main {
     padding: 120px 30px 30px;
     max-width: 90%;
@@ -108,9 +109,15 @@ section {
 
 .image_deffilante {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
+
     object-fit: cover;
     display: block;
+}
+
+.image_deffilante-section {
+    margin-left: 0;
+    padding: 0;
 }
 
 footer {
@@ -272,9 +279,67 @@ form button:hover {
 }
 
 
-@media (max-width: 832px) {
+
+@media (max-width: 1050px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        background-color: #fff;
+    }
+
+    .logo {
+        height: 45px;
+        margin: 0;
+    }
+
+    .call-button {
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .call-button:hover {
+        background-color: #333333;
+        transform: translate(-50%, -50%) scale(1.03) rotate(-1.5deg);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+
     .hamburger {
         display: block;
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+        color: #000;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .hamburger-icon {
+        width: 22px;
+        height: auto;
     }
 
     nav ul {
