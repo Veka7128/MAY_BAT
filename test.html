@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bouton Stylé Deluxe</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .bouton-style {
+            color: black;
+            background: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s ease, background 0.4s ease, transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .bouton-style::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+            z-index: -1;
+        }
+
+        .bouton-style:hover {
+            color: white;
+            background: black;
+            transform: scale(1.05);
+        }
+
+        .bouton-style:hover::before {
+            width: 300%;
+            height: 300%;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="bouton-style">Clique-moi stylé ✨</button>
+
+</body>
+
+</html>
